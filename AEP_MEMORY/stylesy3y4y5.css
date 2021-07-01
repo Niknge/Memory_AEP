@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 75%;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    background-image: url("https://cdnb.artstation.com/p/users/covers/000/766/243/default/36fe931c8451a56d5eba21f3c0089d27.jpg?1528951072");
+    background-size: cover;
+}
+
+.memory-game {
+    width: 1920px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+.memory-card {
+    width: calc(12.5% - 10px);
+    height: calc(5% -10px);
+    margin: 5px;
+    position: relative;
+    box-shadow: 3px 3px 3px rgba(0,0,0,.3);
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition-duration: .5s;
+}
+
+.buttonClass {
+    width: 150px;
+    height: 75px;
+    background-color: black;
+    color: white;
+    font-family: Arial Black;
+    font-size: 20px;
+}
+
+.front-face,
+.back-face {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    position: absolute;
+    border-radius: 5px;
+    background-color: black;
+    backface-visibility: hidden;
+}
+
+.memory-card:active {
+    transform: scale(0.97);
+    transition-duration: .2s;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}
+
+footer {
+    color: floralwhite;
+    width: 500px;
+    height: 20px;
+    font-family: Arial;
+    font-size: 14px;
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+}
